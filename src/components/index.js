@@ -12,5 +12,6 @@ export { default as SubmitBtn } from "./SubmitBtn";
 export { default as FormInput } from "./FormInput";
 export { default as ProductsContainer } from "./ProductsContainer";
 export { default as CartItemsList } from "./CartItemsList";
-export { default as CartTotals } from "./CartTotals";
-export { default as CartItems } from "./CartItems";
+export { default as CartTotal } from "./CartTotal";
+export { default as CartItem } from "./CartItem";
+export { default as ProtectedRotes } from "./ProtectedRotes";

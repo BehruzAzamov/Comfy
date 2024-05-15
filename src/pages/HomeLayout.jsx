@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Header />
       <Navbar className="align-element" />
-      <main className="align-element pt-10">
+      <main className="align-element">
         <Outlet />
       </main>
     </div>

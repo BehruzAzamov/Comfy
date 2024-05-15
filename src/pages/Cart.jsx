@@ -1,27 +1,48 @@
-import { useSelector } from "react-redux"
-import { CartItemsList, CartTotals } from "../components"
-import { Link } from "react-router-dom"
+import React from "react";
+import { generateAmountOptions } from "../utils";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { CartItemsList, CartTotal } from "../components";
 
 const Cart = () => {
-
-  const user = null
-  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart)
+  const { user } = useSelector((state) => state.userState);
+  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
   if (numItemsInCart === 0) {
-    return <h2 className="text-5xl font-bold border-b border-solid py-4">Your cart is empty</h2>
+    return "Your cart is Empty";
   }
-  console.log(numItemsInCart);
+
   return (
-    <div className="align-element">
-      <div className="lg:col-span">
-        <CartItemsList />
+    <div className="py-20">
+      <div className="border-b border-base-300 pb-5">
+        <h2 className="text-3xl font-medium tracking-wider capitalize">
+          Shopping Cart
+        </h2>
       </div>
-      <div className="lg:col-span-4 lg:pl-4">
-        <CartTotals /> {user ?
-          <Link className="btn btn-primary btn-block mt-8" to='./checkout'>Procced to checkout</Link> :
-          <Link className="btn btn-primary btn-block mt-8" to='./login'>Please login </Link>}
+      <div className="mt-8 grid gap-8 lg:grid-cols-12">
+        <div className="lg:col-span-8">
+          <CartItemsList />
+        </div>
+        <div className="lg:col-span-4 lg:pl-4">
+          <CartTotal />
+          {user ? (
+            <Link
+              className="btn btn-primary btn-block mt-8 uppercase"
+              to="/checkout"
+            >
+              proceed to checkout
+            </Link>
+          ) : (
+            <Link
+              className="btn btn-primary btn-block mt-8 uppercase"
+              to="/login"
+            >
+              please login
+            </Link>
+          )}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
