@@ -31,19 +31,19 @@ function Register() {
           type="text"
           label="Display Name :"
           name="displayName"
-          defaultvalue="User Name"
+          defaultvalue="User1"
         />
         <FormInput
           type="url"
           label="Photo URL"
           name="photoURL"
-          defaultvalue="https://photoURL.com"
+          defaultvalue="https://..."
         />
         <FormInput
           type="email"
           label="E-mail"
           name="email"
-          defaultvalue="test@gmail.com"
+          defaultvalue="test1@gmail.com"
         />
         <FormInput
           type="password"
