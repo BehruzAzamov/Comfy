@@ -2,13 +2,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCk12vXU6xJDp0I4QL1EAkT7UV_vbMVjD8",
-  authDomain: "comfy-bao.firebaseapp.com",
-  projectId: "comfy-bao",
-  storageBucket: "comfy-bao.appspot.com",
-  messagingSenderId: "603778820428",
-  appId: "1:603778820428:web:b29f58b582de4738fcc7e9"
+  apiKey: "AIzaSyCFJY4Kz0b5AT7nT2jke7tex2eeCasbCOU",
+  authDomain: "products-9a666.firebaseapp.com",
+  projectId: "products-9a666",
+  storageBucket: "products-9a666.appspot.com",
+  messagingSenderId: "693790091754",
+  appId: "1:693790091754:web:12d12e7489b0270298ea93"
 };
 
 // Initialize Firebase
